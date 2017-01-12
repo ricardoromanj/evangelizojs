@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjricardo/evangelizo.git"
+    "url": "git+https://github.com/rjricardo/evangelizojs.git"
   },
   "keywords": [
     "evangelizo"
   ],
   "author": "Ricardo Roman <r.rmn92@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rjricardo/evangelizo/issues"
+    "url": "https://github.com/rjricardo/evangelizojs/issues"
   },
-  "homepage": "https://github.com/rjricardo/evangelizo#readme",
+  "homepage": "https://github.com/rjricardo/evangelizojs#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
     "dateformat": "^2.0.0",
