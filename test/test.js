@@ -60,7 +60,7 @@ describe('Evangelizo', function() {
             it('should return a valid string', function(done) {
 
                 evangelizo.getReading('FR').then((str) => {
-                    if (typeof str === 'undefined') done();
+                    if (typeof str === 'string') done();
                     else done(err);
                 }, (err) => {
                     done(err);
@@ -73,7 +73,7 @@ describe('Evangelizo', function() {
             it('should return a valid string', function(done) {
 
                 evangelizo.getReading('FR', { date: testDate, lang: 'SP' }).then((str) => {
-                    if (typeof str === 'undefined') done();
+                    if (typeof str === 'string') done();
                     else done(err);
                 }, (err) => {
                     done(err);
@@ -82,39 +82,55 @@ describe('Evangelizo', function() {
             });
         });
 
+        describe('#getReadingLt() only with content parameter', function() {
+            it('should return a valid string', function(done) {
 
-});
+                evangelizo.getReadingLt('FR').then((str) => {
+                    if (typeof str === 'string') done();
+                    else done(err);
+                }, (err) => {
+                    done(err);
+                });
 
+            });
+        });
 
+        describe('#getReadingLt() with content, date and lang parameters', function() {
+            it('should return a valid string', function(done) {
 
+                evangelizo.getReadingLt('FR', { date: testDate, lang: 'SP' }).then((str) => {
+                    if (typeof str === 'string') done();
+                    else done(err);
+                }, (err) => {
+                    done(err);
+                });
 
+            });
+        });
 
-evangelizo.getReadingLt('FR').then((str) => {
-        if (typeof str === 'undefined') done();
-        else done(err);
-}, (err) => {
-        done(err);
-});
+        describe('#getReadingSt() only with content parameter', function() {
+            it('should return a valid string', function(done) {
 
-evangelizo.getReadingSt('FR').then((str) => {
-        if (typeof str === 'undefined') done();
-        else done(err);
-}, (err) => {
-        done(err);
-});
+                evangelizo.getReadingSt('FR').then((str) => {
+                    if (typeof str === 'string') done();
+                    else done(err);
+                }, (err) => {
+                    done(err);
+                });
 
+            });
+        });
 
+        describe('#getReadingSt() with content, date and lang parameters', function() {
+            it('should return a valid string', function(done) {
 
-evangelizo.getReadingLt('FR', { date: testDate, lang: 'SP' }).then((str) => {
-        if (typeof str === 'undefined') done();
-        else done(err);
-}, (err) => {
-        done(err);
-});
+                evangelizo.getReadingSt('FR', { date: testDate, lang: 'SP' }).then((str) => {
+                    if (typeof str === 'string') done();
+                    else done(err);
+                }, (err) => {
+                    done(err);
+                });
 
-evangelizo.getReadingSt('FR', { date: testDate, lang: 'SP' }).then((str) => {
-        if (typeof str === 'undefined') done();
-        else done(err);
-}, (err) => {
-        done(err);
+            });
+        });
 });
