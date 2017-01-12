@@ -1,0 +1,31 @@
+{
+  "name": "evangelizo",
+  "version": "1.0.0",
+  "description": "Wrapper for the Evangelizo API http://feed.evangelizo.org/v2/reader.php?",
+  "main": "lib/evangelizo.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjricardo/evangelizo.git"
+  },
+  "keywords": [
+    "evangelizo"
+  ],
+  "author": "Ricardo Roman <r.rmn92@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjricardo/evangelizo/issues"
+  },
+  "homepage": "https://github.com/rjricardo/evangelizo#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "dateformat": "^2.0.0",
+    "lodash": "^4.17.4",
+    "promise": "^7.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
