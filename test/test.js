@@ -170,4 +170,17 @@ describe('Evangelizo', function() {
 
         });
     });
+
+    describe('Check date validation', function() {
+        it('should return err upon entering \'20170113\' as date', function(done) {
+
+            evangelizo.getSaint({ date: '20170113' }).then((str) => {
+                console.log(str);
+                done(str);
+            }, (err) => {
+                if (typeof err === 'string') { console.log(err); done(); }
+            });
+
+        });
+    });
 });
