@@ -1,6 +1,6 @@
 {
   "name": "evangelizo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wrapper for the Evangelizo API http://feed.evangelizo.org/v2/reader.php?",
   "main": "lib/evangelizo.js",
   "scripts": {
