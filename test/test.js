@@ -183,4 +183,32 @@ describe('Evangelizo', function() {
 
         });
     });
+
+    describe('#getReadingSt() with content, NUMBER date and lang parameters', function() {
+        it('should return a valid string', function(done) {
+
+            evangelizo.getReadingSt('FR', { date: 20170425, lang: 'SP' }).then((str) => {
+                console.log(str);
+                if (typeof str === 'string') done();
+                else done(err);
+            }, (err) => {
+                done(err);
+            });
+
+        });
+    });
+
+    describe('Check NUMBER date validation', function() {
+        it('should return err upon entering \'20170244\' as date', function(done) {
+
+            evangelizo.getSaint({ date: '20170244' }).then((str) => {
+                console.log(str);
+                done(str);
+            }, (err) => {
+                if (typeof err === 'string') { console.log(err); done(); }
+            });
+
+        });
+    });
+
 });
