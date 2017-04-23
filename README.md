@@ -47,6 +47,16 @@ evangelizo.getSaint({ date: Date.(2017, 01, 01), lang: 'SP'}).then((str) => {
 //#=> Beatos Juan y Renato Lego
 ```
 
+The date can also be entered in numeric value
+```javascript
+evangelizo.getSaint({ date: 20170101, lang: 'SP'}).then((str) => {
+  console.log(str);
+}, (err) => {
+  console.log(err);
+});
+//#=> Beatos Juan y Renato Lego
+```
+
 For readings and titles you must specify a content variable, which can be: 
 - FR: First Reading
 - PS: Psalm
