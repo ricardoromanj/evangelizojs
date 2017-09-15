@@ -187,7 +187,7 @@ describe('Evangelizo', function() {
     describe('#getReadingSt() with content, NUMBER date and lang parameters', function() {
         it('should return a valid string', function(done) {
 
-            evangelizo.getReadingSt('FR', { date: 20170525, lang: 'SP' }).then((str) => {
+            evangelizo.getReadingSt('FR', { date: 20170825, lang: 'SP' }).then((str) => {
                 console.log(str);
                 if (typeof str === 'string') done();
                 else done(err);
